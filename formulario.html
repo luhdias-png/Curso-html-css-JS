@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <button><a href="inicio.html">Inicio</a></button>
+        <button><a href="tabela.html">Bolos</a></button>
+        <button><a href="formulario.html">Formulario</a></button>
+    </nav>
+    <h1>Formulario</h1>
+    <a href="inicio.html">Homepage</a>
+
+    <h3>Boletim Mensal</h3>
+    <hr>
+    <form method="post" id="boletim" action="grato.html">
+        <!-- method "post" = enviar dados / action = o que vai fazer pós submit -->
+        <fieldset id="info_usuario">
+            <legend>Informacoes Pessoais</legend>
+            <p>
+                <label for="nome">*Nome: </label> <input type="text" name="nome" id="nome-formulario"
+                    placeholder="Digite seu nome" size="30" required> <!-- rotulo + input -->
+                <br>
+                <label for="email">*Email: </label> <input type="email" name="emal" id="email"
+                    placeholder="Digite seu email" required>
+                <br>
+                <label for="nascimento">*Data de Nascimento: </label> <input type="date" name="nascimento"
+                    id="nascimento" required>
+                <br>
+                <label for="CEP">*CEP: </label> <input type="text" name="cep" id="cpf" placeholder="00000-000"
+                    maxlength="10" required> <!-- maxlength é o tamanho maximo -->
+                <br>
+                <label for="estado">Estado</label>
+                <select name="estado" id="estado">
+                    <option value="CE">Ceara</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="BA">Baiha</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Mina Gerais</option>
+                    <option value="ES">Espirito Santo</option>
+                    <option value="AM">Amazonas</option>
+                </select>
+            </p>
+        </fieldset>
+        <fieldset id="Estilo_musicas">
+            <legend>Estilo Musicais</legend>
+            <p>
+                <label for="conteudo">Escolha seu conteudo:</label>
+                <input type="radio" name="conteudo" value="rock"> Rock
+                <input type="radio" name="conteudo" value="pop"> Pop
+                <input type="radio" name="conteudo" value="electronic"> Eletronica
+                <input type="radio" name="conteudo" value="gospel"> Gospel
+                <input type="radio" name="conteudo" value="pagode" checked="true"> Pagode
+                <br>
+                <label for="comentario">Comentario:</label>
+                <textarea name="comentario" id="comentario" rows="10" cols="55"
+                    placeholder="Digite um comentario"></textarea>
+            </p>
+
+            <p>
+                <input type="submit" name="enviar" value="Salvar">
+            </p>
+        </fieldset>
+        <p>
+            Campos com * são obrigatorios!
+        </p>
+    </form>
+</body>
+
+</html>
